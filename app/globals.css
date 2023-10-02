@@ -1,0 +1,594 @@
+/* Reset and import Tailwind CSS styles */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom scrollbar styles for Webkit browsers */
+::-webkit-scrollbar {
+  width: 6px;
+  background-color: transparent;
+}
+
+/* Custom scrollbar thumb styles */
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: #2196f3;
+}
+
+/* Styles for a pseudo-element used in carousel image items */
+.carousel-image-item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 40%;
+  background: rgba(0, 0, 0, 0);
+}
+
+/* Styles for a dropdown content container */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #162649;
+  margin-top: 10px;
+  min-width: fit-content;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 8px;
+}
+
+/* Styles for a login button */
+.login-btn {
+  left: -100%;
+}
+
+/* Styles for links inside dropdown content */
+.dropdown-content a {
+  border-radius: 8px;
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Styles for showing dropdown content on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Text truncation styles */
+.text-truncate-5 {
+  line-height: 1.5;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Styles for normal input fields */
+.normal-input {
+  @apply block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-2 ring-inset ring-gray-300   outline-none focus:ring-blue-600 sm:text-sm sm:leading-6 px-2;
+}
+
+/* Styles for error input fields */
+.error-input {
+  @apply block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-2 ring-inset ring-red-600 outline-none sm:text-sm sm:leading-6 px-2;
+}
+
+/* Custom styles to hide the Webkit scrollbar */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Styles for hiding scrollbars in IE, Edge, and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Styles for showing content on hover using group classes */
+.group:hover .group-hover\:visible {
+  visibility: visible;
+}
+
+/* Styles for showing content on hover using group2 classes */
+.group2:hover .group2-hover\:visible {
+  visibility: visible;
+}
+
+/* Additional positioning styles */
+.left-20 {
+  left: 5rem;
+}
+
+/* Styles for submenu links */
+.submenu > a {
+  width: 192px;
+}
+
+/* Styles for links on hover */
+.links a:hover {
+  color: #7da33f;
+}
+
+/* Styles for a card container */
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px 1px;
+  margin: 10px 0;
+  text-align: center;
+  position: relative;
+  background: linear-gradient(
+    45deg,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+}
+
+/* Styles for content within a card */
+.content {
+  padding: 20px;
+}
+
+/* Styles for pricing information in a card */
+.content .price {
+  color: white;
+  font-weight: 800;
+  font-size: 50px;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.42);
+}
+
+/* Styles for card description */
+.content .description {
+  color: rgba(255, 255, 255, 0.8);
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* Styles for card title */
+.content .title {
+  font-weight: 800;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.64);
+  margin-top: 10px;
+  font-size: 25px;
+  letter-spacing: 1px;
+}
+
+/* Custom button styles */
+.btn-custom-rate {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  border: none;
+  outline: none;
+  color: rgb(255 255 255);
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.75rem;
+  padding: 0.75rem 1.5rem;
+  background-color: rgb(163, 195, 50);
+  border-radius: 0.5rem;
+  width: 90%;
+  text-shadow: 0px 4px 18px #2c3442;
+}
+
+/* Styles for a switch component */
+.switch {
+  --secondary-container: #000;
+  --primary: #fff;
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 3.7em;
+  height: 1.8em;
+}
+
+/* Styles for the input element within the switch */
+.switch input {
+  display: none;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Styles for the slider in the switch */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #313033;
+  transition: 0.2s;
+  border-radius: 30px;
+}
+
+/* Styles for the slider's thumb */
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.4em;
+  width: 1.4em;
+  border-radius: 20px;
+  left: 0.2em;
+  bottom: 0.2em;
+  background-color: #aeaaae;
+  transition: 0.4s;
+}
+
+/* Styles for the slider when checked */
+input:checked + .slider::before {
+  background-color: var(--primary);
+}
+
+/* Styles for the slider when checked */
+input:checked + .slider {
+  background-color: var(--secondary-container);
+}
+
+/* Styles for the slider when focused */
+input:focus + .slider {
+  box-shadow: 0 0 1px var(--secondary-container);
+}
+
+/* Styles for the slider's thumb when checked */
+input:checked + .slider:before {
+  transform: translateX(1.9em);
+}
+
+/* Styles for a card used for membership */
+.card-member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  max-width: 400px;
+  padding: 20px 1px;
+  margin: 10px 0;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.4),
+    0 4px 6px -4px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  background-color: #6b6ecc;
+  background: linear-gradient(45deg, #04051dea 0%, rgba(0, 0, 0, 0.4) 100%);
+}
+
+/* Styles for content within a membership card */
+.content-membership {
+  padding: 20px;
+}
+
+/* Styles for pricing information in a membership card */
+.content-membership .price {
+  color: white;
+  font-weight: 800;
+  font-size: 50px;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.42);
+}
+
+/* Styles for description in a membership card */
+.content-membership .description {
+  color: rgba(255, 255, 255, 0.8);
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+/* Styles for title in a membership card */
+.content-membership .title {
+  font-weight: 800;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.64);
+  margin-top: 10px;
+  font-size: 25px;
+  letter-spacing: 1px;
+}
+
+/* Styles for a card used for fitness */
+.card-fitness {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px 1px;
+  max-width: clamp(400px, 500px, 60vw);
+  margin: 10px 0;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.4),
+    0 4px 6px -4px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  background-color: #6b6ecc;
+  background: linear-gradient(45deg, #04051dea 0%, rgba(0, 0, 0, 0.4) 100%);
+}
+
+/* Gradient background styles */
+.gradient {
+  background: #56ab2f;
+  background: -webkit-linear-gradient(to right, #a8e063, #56ab2f);
+  background: linear-gradient(to right, #a8e063, #56ab2f);
+}
+
+/* Background color styles */
+.bg-greens {
+  background-color: rgb(163, 195, 50);
+}
+
+/* Styles for a TSheet widget (set to display:none) */
+#t-sheet-widget {
+  display: none;
+}
+
+/* Flip card animation styles (commented out) */
+/* .flip-card {
+  transition: transform 0.5s;
+  transform: rotateY(180deg);
+}
+
+.flipped {
+  transform: rotateY(180deg);
+}
+*/
+
+/* Reset margins and padding for all anchor tags */
+a {
+  margin: 0;
+  padding: 0;
+}
+
+/* Styles for a card with flip animation */
+.card {
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+/* Styles for the flipped state of the card */
+.flipped {
+  transform: rotateX(180deg);
+}
+
+/* Styles for the front and back of the card */
+.front,
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+/* Styles for the front of the card */
+.front {
+  z-index: 2;
+  transform: rotateY(0deg);
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Styles for the back of the card */
+.back {
+  transform: rotateY(180deg);
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Common styles for the entire home page */
+.home-page {
+  /* Add any common styles for the entire home page here */
+}
+
+/* Styles for the hero section */
+.hero-section {
+  height: 30vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+}
+
+/* Styles for content within the hero section */
+.hero-content {
+  /* Add any styles for the content inside the hero section here */
+}
+
+/* Styles for a review slide */
+.review-slide {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  padding-bottom: 0;
+
+  /* background: rgba(0, 0, 0, 0.7); */
+}
+
+/* Styles for paragraphs within a review slide */
+.review-slide p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+/* Styles for dot separators */
+/* .dot-separator {
+  width: 6px;
+  height: 6px;
+  background-color: #888;
+  border-radius: 50%;
+  margin: 0 10px;
+} */
+
+/* Styles for dot separators with absolute positioning */
+.dots::after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  height: 6px;
+  width: 6px;
+  background-color: #fff;
+  border-radius: 50%;
+  top: 38%;
+  margin-left: 5px;
+}
+
+/* Styles for horizontal lines with absolute positioning */
+.horizontal-line::before {
+  content: "";
+  position: absolute;
+  left: -20%;
+  height: 100%;
+  width: 0px;
+  background-color: #fff;
+}
+
+/* Media query for horizontal lines on larger screens */
+@media (min-width: 768px) {
+  .horizontal-line::before {
+    width: 2px;
+  }
+}
+
+/* Font face declarations for custom fonts */
+
+@font-face {
+  font-family: "G bold";
+  src: url("/fonts/Fontspring-DEMO-allroundgothic-bold.otf");
+}
+@font-face {
+  font-family: "G boldoblique";
+  src: url("/fonts/Fontspring-DEMO-allroundgothic-boldoblique.otf");
+}
+@font-face {
+  font-family: "G book";
+  src: url("/fonts/Fontspring-DEMO-allroundgothic-book.otf");
+}
+@font-face {
+  font-family: "G bookoblique";
+  src: url("/fonts/Fontspring-DEMO-allroundgothic-bookoblique.otf");
+}
+@font-face {
+  font-family: "G demi";
+  src: url("/fonts/Fontspring-DEMO-allroundgothic-demi.otf");
+}
+@font-face {
+  font-family: "G demioblique";
+  src: url("/fonts/Fontspring-DEMO-allroundgothic-demioblique.otf");
+}
+@font-face {
+  font-family: "G lig";
+  src: url("/fonts/Fontspring-DEMO-allroundgothic-lig.otf");
+}
+@font-face {
+  font-family: "G ligoblique";
+  src: url("/fonts/Fontspring-DEMO-allroundgothic-ligoblique.otf");
+}
+@font-face {
+  font-family: "G medium";
+  src: url("/fonts/Fontspring-DEMO-allroundgothic-medium.otf");
+}
+@font-face {
+  font-family: "G mediumoblique";
+  src: url("/fonts/Fontspring-DEMO-allroundgothic-mediumoblique.otf");
+}
+@font-face {
+  font-family: "G semi";
+  src: url("/fonts/Fontspring-DEMO-allroundgothic-semi.otf");
+}
+@font-face {
+  font-family: "G semioblique";
+  src: url("/fonts/Fontspring-DEMO-allroundgothic-semioblique.otf");
+}
+@font-face {
+  font-family: "G text";
+  src: url("/fonts/Fontspring-DEMO-allroundgothic-text.otf");
+}
+@font-face {
+  font-family: "G textoblique";
+  src: url("/fonts/Fontspring-DEMO-allroundgothic-textoblique.otf");
+}
+@font-face {
+  font-family: "G thick";
+  src: url("/fonts/Fontspring-DEMO-allroundgothic-thick.otf");
+}
+@font-face {
+  font-family: "G thickoblique";
+  src: url("/fonts/Fontspring-DEMO-allroundgothic-thickoblique.otf");
+}
+@font-face {
+  font-family: "G xlig";
+  src: url("/fonts/Fontspring-DEMO-allroundgothic-xlig.otf");
+}
+@font-face {
+  font-family: "G xligoblique";
+  src: url("/fonts/Fontspring-DEMO-allroundgothic-xligoblique.otf");
+}
+@font-face {
+  font-family: "Din Condensed";
+  src: url("/fonts/din-condensed_demi-bold.otf");
+}
+@font-face {
+  font-family: "Shree Devanagari";
+  src: url("/fonts/Shree-Devanagari-714.ttf");
+}
+
+/* Additional font face declarations for custom fonts */
+/* ... (more font-face declarations) ... */
+
+/* Styles for elements with the 'active' class */
+.active {
+  border-bottom: 2px solid white; /* Adjust the color as needed */
+}
+
+/* Text color styles */
+.text-brown {
+  color: brown;
+}
+
+/* Border color styles */
+.border-brown {
+  border-color: brown;
+}
+
+/* Text color styles */
+.text-green {
+  color: #7ca23f;
+}
+
+/* Text color styles */
+.text-violet {
+  color: #172649;
+}
+
+/* Border color styles */
+.border-violet {
+  border-color: #172649;
+}
+
+/* Border color styles */
+.border-maroon {
+  color: #791214;
+}
+
+/* Text color styles */
+.text-maroon {
+  color: #791214;
+}
+
+.golf-image-1 {
+  width: 80%;
+  height: auto;
+  max-height: 420px;
+}
