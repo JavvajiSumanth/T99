@@ -42,7 +42,7 @@ const Membership = () => {
               </ul>
               <ul className="list-disc list-inside mt-4 pl-4 lg:pl-10">
                 <li className="text-xl  font-semibold">
-                  ADDITONAL FAMILY - $540/PERSON <br />{" "}
+                  ADDITONAL FAMILY - $965/PERSON <br />{" "}
                   <span className="text-lg font-normal ml-6 lg:ml-10">
                     * up to 4 additional familv members
                   </span>
@@ -71,7 +71,7 @@ const Membership = () => {
               </ul>
               <ul className="list-disc list-inside mt-4 pl-4 lg:pl-10">
                 <li className="text-xl  font-semibold">
-                  ADDITIONAL FAMILY - $324/PERSON <br />{" "}
+                  ADDITIONAL FAMILY - $680/PERSON <br />{" "}
                   <span className="text-lg font-normal ml-6 lg:ml-10">
                     * up to 4 additional family members
                   </span>
@@ -131,7 +131,7 @@ const Membership = () => {
               </ul>
               <ul className="list-disc list-inside mt-4 pl-4 lg:pl-10">
                 <li className="text-xl  font-semibold">
-                  ADDITONAL FAMILY - $50/PERSON <br />{" "}
+                  ADDITONAL FAMILY - $89/PERSON <br />{" "}
                   <span className="text-lg font-normal ml-6 lg:ml-10">
                     * up to 4 additional family members
                   </span>
@@ -161,7 +161,7 @@ const Membership = () => {
               </ul>
               <ul className="list-disc list-inside mt-4 pl-4 lg:pl-10">
                 <li className="text-xl  font-semibold">
-                  ADDITIONAL FAMILY - $35/PERSON <br />{" "}
+                  ADDITIONAL FAMILY - $63/PERSON <br />{" "}
                   <span className="text-lg font-normal ml-6 lg:ml-10">
                     * up to 4 additional family members
                   </span>

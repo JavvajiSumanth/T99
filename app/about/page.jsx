@@ -3,7 +3,7 @@ import React from "react";
 
 // Import images
 import ABOUTHEADER from "../../public/golf/about-header.png";
-import Ingrid from "../../public/golf/about-ingrid.png";
+// import Ingrid from "../../public/golf/about-ingrid.png";
 import Josh from "../../public/golf/about-josh.png";
 import Chris from "../../public/golf/about-chris.png";
 import MiniHeader from "@/layout/MainLayout/MiniHeader";
@@ -54,7 +54,7 @@ const AboutView = () => {
                   GENERAL MANAGER
                 </p>
               </div>
-              <div className="flex flex-col items-center space-x-4 ">
+              {/* <div className="flex flex-col items-center space-x-4 ">
                 <img
                   src={Ingrid.src}
                   alt="Ingrid profile"
@@ -66,7 +66,7 @@ const AboutView = () => {
                 <p className="text-center text-gray-600 text-lg font-semibold">
                   OPERATIONS MANAGER
                 </p>
-              </div>
+              </div> */}
               <div className="flex flex-col items-center space-x-4  px-4">
                 <img
                   src={Chris.src}
